@@ -1,0 +1,148 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Шапка */
+.site-header {
+  background-color: #222;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.site-header nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 12px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color .3s;
+}
+
+.site-header nav a:hover { background-color: #444; }
+
+/* Основной контент */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section { margin-bottom: 40px; }
+
+h2 {
+  font-size: 26px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 6px;
+}
+
+/* Блок "О себе" */
+.hero {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #333;
+  flex-shrink: 0;
+}
+
+.hero-text h1 { margin: 0 0 6px; font-size: 28px; }
+
+.subtitle { color: #555; margin: 0 0 12px; }
+
+.quote {
+  font-style: italic;
+  color: #777;
+  border-left: 3px solid #ccc;
+  padding-left: 12px;
+}
+
+/* Навыки */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.07);
+}
+
+.skill-card h3 { margin-top: 0; }
+
+.bar {
+  background: #e4e4e4;
+  border-radius: 6px;
+  height: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+}
+
+/* Проекты и увлечения */
+.projects-list, .hobbies { padding-left: 20px; }
+
+.projects-list li, .hobbies li {
+  background: #fff;
+  margin: 8px 0;
+  padding: 10px 14px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+/* Контакты */
+#contacts a { color: #2563eb; }
+
+/* Подвал */
+footer {
+  text-align: center;
+  padding: 24px 0;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* Мобильная версия */
+@media (max-width: 600px) {
+  .hero { flex-direction: column; text-align: center; }
+  .site-header { justify-content: center; }
+  .site-header nav a { margin: 4px; }
+}
