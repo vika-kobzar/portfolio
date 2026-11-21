@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/
+
+Allow: /
+
+Sitemap: https://vika-kobzar.github.io/portfolio/sitemap.xml
